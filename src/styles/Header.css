@@ -1,0 +1,9 @@
+.navbar{
+    background-color: #007ead;
+    position: fixed;
+    display: grid;
+    top:0;
+    width: 100vw;
+    padding: 15px;
+    z-index: 3;
+}

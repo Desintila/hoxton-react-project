@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "firstName": "Desintila",
+      "lastName": "Luzi",
+      "email": "desi@gmail.com",
+      "password": "1234",
+      "avatar": "https://avatars.dicebear.com/api/avataaars/DesintilaLuzi.svg",
+      "id": 1
+    }
+  ]
+}
