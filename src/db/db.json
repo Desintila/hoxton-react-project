@@ -8,5 +8,106 @@
       "avatar": "https://avatars.dicebear.com/api/avataaars/DesintilaLuzi.svg",
       "id": 1
     }
+  ],
+  "books": [
+    {
+      "title": "The adventures of Tom Sawyer",
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+04429400_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+      "author": "Mark Twain",
+      "status": "completed",
+      "genre": "Adventure",
+      "description": "The adventures of a mischievous young boy and his friends growing up in a Mississippi River town in the nineteenth century. Who could forget the pranks, the adventures, the sheer fun of Tom Sawyer? It's something every child should experience and every child will love. From Tom's sly trickery with the whitewashed fence, when he cleverly manipulates everyone so they happily do his work for him, to his and Becky Thatcher's calamities in Bat Cave,the enjoyment just never ends.",
+      "chapters": 36,
+      "date": "01/02/2022",
+      "id": 1
+    },
+    {
+      "title": "Peter Pan",
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+76361197_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+      "author": "J M Barrie",
+      "status": "ongoing",
+      "genre": "Fiction",
+      "description": "The adventures of the three Darling children in Never-Never Land with Peter Pan, the boy who would not grow up. The quintessential rebel, dead-set against growing up, returns in luminous, almost ethereally beautiful paintings that stop short of heavy-duty formality in their expressiveness and liveliness. No caricatures or stereotypes here; these are characters, full of life, and ready to soar through the pages of Barrie's classic journey to Neverland. Best Books for Children, 6th ed. A handsome edition of this classic, with more than 50 oil paintings. Available again, this popular edition of Peter Pan includes the complete and unabridged text accompanied by fifty full-color paintings by Scott Gustafson.",
+      "chapters": 17,
+      "date": "01/01/2022",
+      "id": 2
+    },
+    {
+      "title": "The stranger",
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+40063136_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+      "author": "Albert Camus",
+      "status": "completed",
+      "genre": "Fiction",
+      "description": "A young Algerian, Meursault, afflicted with a sort of aimless inertia, becomes embroiled in the petty intrigues of a local pimp and, somewhat inexplicably, ends up killing a man. Once he's imprisoned and eventually brought to trial, his crime, it becomes apparent, is not so much the arguably defensible murder he has committed as it is his deficient character. In the story of an ordinary man who unwittingly gets drawn into a senseless murder on a sun-drenched Algerian beach, Camus was exploring what he termed the nakedness of man faced with the absurd. Now in a new American translation, the classic has been given new life for generations to come",
+      "chapters": 20,
+      "date": "31/01/2022",
+      "id": 3
+    },
+    {
+      "title": "The Da Vinci code",
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+40157450_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+      "author": "Dan Brown",
+      "status": "completed",
+      "genre": "Mystery",
+      "description": "While in Paris on business, Harvard symbologist Robert Langdon receives an urgent late-night phone call: the elderly curator of the Louvre has been murdered inside the museum. Near the body, police have found a baffling cipher. While working to solve the enigmatic riddle, Langdon is stunned to discover it leads to a trail of clues hidden in the works of Da Vinci--clues visible for all to see--yet ingeniously disguised by the painter. Langdon joins forces with a gifted French cryptologist, Sophie Neveu, and learns the late curator was involved in the Priory of Sion--an actual secret society whose members included Sir Isaac Newton, Botticelli, Victor Hugo, and Da Vinci, among others. In a breathless race through Paris, London, and beyond, Langdon and Neveu match wits with a faceless powerbroker who seems to anticipate their every move. Unless Langdon and Neveu can decipher the labyrinthine puzzle in time, the Priory's ancient secret--and an explosive historical truth--will be lost forever. ",
+      "chapters": 65,
+      "date": "01/02/2022",
+      "id": 4
+    },
+    {
+      "title": "Pinocchio",
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+428544412_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+      "author": "Carlo Collodi",
+      "status": "ongoing",
+      "genre": "Adventure",
+      "description": "Presents the adventures of Pinocchio, a mischievous wooden puppet, who wants more than anything else to become a real boy.",
+      "chapters": 12,
+      "date": "01/02/2022",
+      "id": 5
+    },
+    {
+      "title": "Heidi",
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+543586922_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+      "author": "Johanna Spyri",
+      "status": "completed",
+      "genre": "Drama",
+      "description": "Heidi is an eight-year-old Swiss orphan who is given by her aunt to her mountain-dwelling grandfather. She is then stolen back by her aunt from her grandfather to live in the wealthy Sesemann household in Frankfurt, Germany as a companion to Klara, a sheltered, disabled girl in a wheelchair. Heidi is unhappy but makes the best of the situation, always longing for her grandfather.",
+      "chapters": 22,
+      "date": "31/01/2022",
+      "id": 6
+    },
+    {
+      "title": "The little prince",
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+14583179_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+      "author": "Antoine de Saint-Exupéry",
+      "status": "ongoing",
+      "genre": "Children",
+      "description": "An aviator whose plane is forced down in the Sahara Desert encounters a little prince from a small planet who relates his adventures in seeking the secret of what is important in life.",
+      "chapters": 5,
+      "date": "24/01/2022",
+      "id": 7
+    },
+    {
+      "title": "Oliver Twist",
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+2070802_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+      "author": "Charles Dickens",
+      "status": "dropped",
+      "genre": "Fiction",
+      "description": "Deals with the adventures of a young orphan boy trying to survive amid greed and poverty in 19th-century London.",
+      "chapters": 2,
+      "date": "01/02/2022",
+      "id": 8
+    },
+    {
+      "title": "The return of the king ",
+      "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+44642566_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+      "author": "J R R Tolkien",
+      "status": "ongoing",
+      "genre": "Adventure",
+      "description": "A chronicle of the great War of the Ring between the hobbits and the Enemy who made the One Ring.",
+      "chapters": 3,
+      "date": "26/01/2022",
+      "id": 9
+    }
   ]
 }

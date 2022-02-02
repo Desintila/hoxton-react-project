@@ -5,5 +5,43 @@
     top:0;
     width: 100vw;
     padding: 15px;
-    z-index: 3;
+    z-index: 7;
+    grid-template-columns: 1fr 0.5fr;
 }
+.left-menu{
+    display: grid;
+    grid-template-columns: 50px 70px;
+    place-items: center;
+    gap: 1rem;
+    
+}
+.app-title{
+    color: white;
+}
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 25%;
+    background-color: #efefef;
+    z-index: 3;
+    padding: 1rem;
+    transform: translateX(-10px);
+
+    transition: 1s;
+   
+  }
+
+  .close{
+      background-color: none;
+      border: none;
+      font-size: 1.5rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+  }
+
+  .menu-icon{
+      color: white!important;
+  }
