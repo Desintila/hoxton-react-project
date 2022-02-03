@@ -11,7 +11,7 @@ function Library({ user }) {
             <section className="books-container">
                 <ul className="books-list">
                     {
-                        user !== '' ? user.library.map(book =>
+                        user.library.map(book =>
                             <li key={book.id}>
                                 <article className="book-item" onClick={() => navigate(`/home`)} >
                                     <div className='book-img'>
@@ -25,7 +25,6 @@ function Library({ user }) {
                                 </article>
                             </li>
                         )
-                            : null
                     }
                 </ul>
             </section>

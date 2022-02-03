@@ -1,5 +1,5 @@
 import { Button, Fab } from "@mui/material"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import '../styles/Details.css'
 import AddIcon from '@mui/icons-material/Add';
@@ -10,7 +10,7 @@ import Tabs from "../components/Tabs";
 function BookDetails({ user, book, setBook, setUser }) {
 
     const params = useParams()
-
+    const [library, setLibrary] = useState([])
     const navigate = useNavigate()
     useEffect(() => {
         fetch(`http://localhost:3000/books/${params.id}`)
@@ -22,7 +22,7 @@ function BookDetails({ user, book, setBook, setUser }) {
         return <h1>Loading</h1>
     }
 
-    function addInLibrary(user, libraryUpdate) {
+    function addInLibrary(libraryUpdate) {
         return fetch(`http://localhost:3000/users/${user.id}`, {
             method: 'PATCH',
             headers: {
@@ -31,14 +31,13 @@ function BookDetails({ user, book, setBook, setUser }) {
             body: JSON.stringify({ library: libraryUpdate.library })
         }).then(resp => resp.json())
     }
-    function addToLibrary() {
+    function addToLibrary(book) {
         const libraryUpdate = JSON.parse(JSON.stringify(user))
-        libraryUpdate.library.push({ id: book.id, title: book.title, image: book.image, status: book.status, chapters: book.chapters })
+        libraryUpdate.library.push({ id: book.id, title: book.title, image: book.image, genre: book.genre, status: book.status })
         setUser(libraryUpdate)
-        addInLibrary(user, libraryUpdate)
-        navigate('/library')
-    }
+        addInLibrary(libraryUpdate)
 
+    }
 
 
 
@@ -57,7 +56,7 @@ function BookDetails({ user, book, setBook, setUser }) {
                         Start Reading
                     </Button>
 
-                    <Fab color="primary" size="small" variant="extended" onClick={() => addToLibrary()}>
+                    <Fab color="primary" size="small" variant="extended" onClick={() => addToLibrary(book)}>
                         <AddIcon />
                     </Fab>
                     <span>Add to library</span>
