@@ -1,111 +1,71 @@
-import { Button, Fab } from "@mui/material"
+
 import { useEffect } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import '../styles/Details.css'
-import AddIcon from '@mui/icons-material/Add';
+
 import Tabs from "../components/Tabs";
+import CommentForm from "../components/CoomentForm";
+import Details from "../components/Details";
 
 
 
-function BookDetails({ user, book, setBook, setUser }) {
+
+function BookDetails({ user, book, setBook, setUser, users }) {
 
     const params = useParams()
 
-    const navigate = useNavigate()
+
     useEffect(() => {
-        fetch(`http://localhost:3000/books/${params.id}`)
+        fetch(`http://localhost:3000/books/${params.id}?_embed=comments`)
             .then(resp => resp.json())
             .then(book => setBook(book))
     }, [])
 
+
+
     if (book === null) {
-        return <h1>Loading</h1>
-    }
-
-    function addInLibrary(libraryUpdate) {
-        return fetch(`http://localhost:3000/users/${user.id}`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ library: libraryUpdate.library })
-        }).then(resp => resp.json())
-    }
-    function addToLibrary() {
-        const libraryUpdate = JSON.parse(JSON.stringify(user))
-        libraryUpdate.library.push({ id: book.id, title: book.title, image: book.image, genre: book.genre, status: book.status })
-        setUser(libraryUpdate)
-        addInLibrary(libraryUpdate)
-        navigate('/library')
-
-    }
-
-    function createComment(updateComments) {
-        return fetch(`http://localhost:3000/books/${book.id}`, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ comments: updateComments.comments })
-        }).then(resp => resp.json())
+        return <h1>Loading...</h1>
     }
 
 
-    function addComment(content) {
-        const updateComments = JSON.parse(JSON.stringify(book))
-        updateComments.comments.push({
-            content: content,
-            userId: user.id,
-            userAvatar: user.avatar,
-            timeCreated: new Date().toLocaleString()
-        })
-        setBook(updateComments)
-        createComment(updateComments)
-    }
 
+
+
+
+
+    let getUsers = users
+    getUsers = getUsers.filter(user => {
+        for (const comment of book.comments) {
+            if (comment.userId === user.id)
+                return true
+        }
+
+
+    })
 
 
     return (
         <main className="container">
-            <section className="books-container">
-                <h2 className="book-title">{book.title}</h2>
-                <div className="img-container">
-                    <img src={book.image} alt={book.title} />
-                </div>
-                <button></button>
-                <div className="buttons">
-                    <Button variant="contained">
-                        Start Reading
-                    </Button>
+            <Details user={user} book={book} setUser={setUser} />
 
-                    <Fab color="primary" size="small" variant="extended" onClick={() => addToLibrary()}>
-                        <AddIcon />
-                    </Fab>
-                    <span>Add to library</span>
-                </div>
-            </section>
-            <section className="book-details">
-                <Tabs book={book} />
+            <Tabs book={book} />
 
-            </section>
+
             <section className="book-details">
                 <h2>Comments</h2>
-                <form onSubmit={(event) => {
-                    event.preventDefault()
-                    addComment(event.target.comment.value)
-                    event.target.reset()
-                }}>
+                <CommentForm user={user} book={book} setBook={setBook} />
 
-                    <input type="text" name="comment" />
-                    <button type="submit">Post</button>
-                </form>
                 <ul>
                     {book.comments.map(comment => (
-                        <li>{comment.content}</li>
-                    ))}
+                        getUsers.map(target =>
+                            <li key={book.id} className="comment">
+                                < img src={target.avatar} width="50" />
+                                <p>{comment.content}</p>
+
+                            </li>
+                        )))}
                 </ul>
-                <div>
-                </div>
+
             </section>
 
         </main >

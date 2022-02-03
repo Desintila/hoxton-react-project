@@ -7,36 +7,25 @@
       "password": "1234",
       "avatar": "https://avatars.dicebear.com/api/avataaars/DesintilaLuzi.svg",
       "id": 1,
+      "library": []
+    },
+    {
+      "firstName": "Denis",
+      "lastName": "Luzi",
+      "email": "user1@gmail.com",
+      "password": "1234",
+      "avatar": "https://avatars.dicebear.com/api/avataaars/DenisLuzi.svg",
       "library": [
-        {
-          "id": 5,
-          "title": "Pinocchio",
-          "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+428544412_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
-          "genre": "Adventure",
-          "status": "ongoing"
-        },
-        {
-          "id": 6,
-          "title": "Heidi",
-          "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+543586922_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
-          "genre": "Drama",
-          "status": "completed"
-        },
-        {
-          "id": 4,
-          "title": "The Da Vinci code",
-          "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+40157450_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
-          "genre": "Mystery",
-          "status": "completed"
-        },
         {
           "id": 1,
           "title": "The adventures of Tom Sawyer",
           "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+04429400_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
           "genre": "Adventure",
-          "status": "completed"
+          "status": "completed",
+          "chapters": 36
         }
-      ]
+      ],
+      "id": 2
     }
   ],
   "books": [
@@ -52,14 +41,6 @@
       "id": 1,
       "tags": [
         "Adventures, Book Characters, Friendship, History"
-      ],
-      "comments": [
-        {
-          "content": "Good story",
-          "userId": 1,
-          "userAvatar": "https://avatars.dicebear.com/api/avataaars/DesintilaLuzi.svg",
-          "timeCreated": "2/3/2022, 11:37:19 AM"
-        }
       ]
     },
     {
@@ -74,8 +55,7 @@
       "id": 2,
       "tags": [
         "Fiction, Fantasy,Fantasy & magical realism,Classic fiction "
-      ],
-      "comments": []
+      ]
     },
     {
       "title": "The stranger",
@@ -89,8 +69,7 @@
       "id": 3,
       "tags": [
         " The stranger, Camus,Philosophy"
-      ],
-      "comments": []
+      ]
     },
     {
       "title": "The Da Vinci code",
@@ -104,8 +83,7 @@
       "id": 4,
       "tags": [
         "Dan Brown,Death,Mystery "
-      ],
-      "comments": []
+      ]
     },
     {
       "title": "Pinocchio",
@@ -119,8 +97,7 @@
       "id": 5,
       "tags": [
         " Carlo Collodi's the Adventures of Pinocchio ,Children"
-      ],
-      "comments": []
+      ]
     },
     {
       "title": "Heidi",
@@ -134,14 +111,6 @@
       "id": 6,
       "tags": [
         " Swiss Alpps, Peter"
-      ],
-      "comments": [
-        {
-          "content": "I love this book. I love it more and more every time I re-read it,",
-          "userId": 1,
-          "userAvatar": "https://avatars.dicebear.com/api/avataaars/DesintilaLuzi.svg",
-          "timeCreated": "2/3/2022, 11:41:27 AM"
-        }
       ]
     },
     {
@@ -156,8 +125,7 @@
       "id": 7,
       "tags": [
         " Children's Books ,Universe"
-      ],
-      "comments": []
+      ]
     },
     {
       "title": "Oliver Twist",
@@ -171,8 +139,7 @@
       "id": 8,
       "tags": [
         "Orphans,Criminals "
-      ],
-      "comments": []
+      ]
     },
     {
       "title": "The return of the king ",
@@ -186,8 +153,21 @@
       "id": 9,
       "tags": [
         " Rings,Battle"
-      ],
-      "comments": []
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "userId": 1,
+      "content": "Good Story",
+      "bookId": 1,
+      "id": 1
+    },
+    {
+      "content": "One of my all time favourite books.",
+      "bookId": 6,
+      "userId": 2,
+      "id": 2
     }
   ]
 }

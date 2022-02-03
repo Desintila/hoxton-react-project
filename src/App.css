@@ -1,0 +1,6 @@
+.footer{
+    background-color: #f8f8f8;
+    display: grid;
+    place-items: center;
+    padding: 3rem;
+}

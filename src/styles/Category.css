@@ -1,0 +1,18 @@
+.category-section{
+    display: grid;
+    justify-items: start;
+    padding: 0.6rem;
+
+}
+.category-buttons{
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.5rem;
+}
+.button-category{
+    background-color: #f2f3f4;
+    border-radius: 6px;
+    padding:0.3rem 0.6rem;
+    border: none;
+}

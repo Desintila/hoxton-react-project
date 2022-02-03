@@ -45,3 +45,9 @@
   .menu-icon{
       color: white!important;
   }
+  .search{
+      border-radius: 10px;
+      border: none;
+      margin-right: 20px;
+      padding-left: 20px;
+  }

@@ -1,37 +1,40 @@
 
-import { useNavigate } from "react-router-dom"
+import Book from "../components/Book"
 
 function Library({ user }) {
 
-    const navigate = useNavigate()
+    if (user !== '') {
+        if (user.library.length === 0) {
+            return (<main className="container">
+                <section className="books-container">
+                    <h1 >Your Reading List is empty</h1>
+                </section></main>)
+        }
 
-    return (
 
-        < main className="container" >
+        return (
+
+
+            < main className="container" >
+                <section className="books-container">
+                    <ul className="books-list">
+                        {
+                            user.library.map(book =>
+                                <Book book={book} key={book.id} />
+                            )
+                        }
+                    </ul>
+                </section>
+            </main >
+        )
+    }
+    else {
+        return (<main className="container">
             <section className="books-container">
-                <ul className="books-list">
-                    {
-                        user.library.map(book =>
-                            <li key={book.id}>
-                                <article className="book-item" onClick={() => navigate(`/home`)} >
-                                    <div className='book-img'>
-                                        <img src={book.image} />
-                                        <span className={`status ${book.status === 'ongoing' ? 'ongoing' : book.status === 'completed' ? 'completed' : 'dropped'}`} >{book.status}</span>
-                                        <span className='chapters'>{book.chapters} ch</span>
-                                    </div>
+                <h1 className="message">Login to see your saved books</h1>
+            </section></main>)
+    }
 
-                                    <h3 className='book-title'>{book.title}</h3>
-
-                                </article>
-                            </li>
-                        )
-                    }
-                </ul>
-            </section>
-
-
-        </main >
-    )
 
 }
 export default Library

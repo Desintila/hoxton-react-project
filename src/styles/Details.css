@@ -37,3 +37,34 @@
     padding: 1rem;
     
 }
+
+.comment-form{
+    padding:  1rem 0;
+    border-top: 1px solid rgb(155, 152, 152);
+}
+.comment-input{
+    background-color: #fff;
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 0 0 3px #ccc;
+    border: 1px solid rgb(153, 151, 151);
+    border-radius: 10px;
+    width: 40%;
+    padding: 0.5rem;
+}
+.post-button{
+    padding: 0.5rem;
+    background-color: transparent;
+    margin-left: 0.3rem;
+    border: none;
+    background-color:#007ead;
+    color: white;
+    border-radius: 3px;
+    font-size: 1.1rem;
+}
+.comment{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    align-items: center;
+}

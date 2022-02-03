@@ -2,8 +2,11 @@ import { useState } from 'react'
 import '../styles/Header.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import DrawerLeft from './Drawer';
-function Header({ user }) {
+import { useNavigate } from 'react-router-dom';
+function Header({ user, setUser, setSearch }) {
     const [open, setOpen] = useState(false);
+    const navigate = useNavigate()
+
 
     const handleDrawerOpen = () => {
         setOpen(true)
@@ -13,16 +16,17 @@ function Header({ user }) {
         setOpen(false)
     }
 
-
     return (
         <header className="header">
             <nav className="navbar">
                 <div className='left-menu'>
                     <MenuIcon fontSize='large' className='menu-icon' onClick={handleDrawerOpen} />
-                    <h1 className='app-title'>HBooks</h1>
+                    <h1 className='app-title' onClick={() => navigate('/home')}>Books</h1>
                 </div>
+                <input type="search" className='search' placeholder='Search...' onChange={event => setSearch(event.target.value)} />
             </nav>
-            <DrawerLeft open={open} handleDrawerClose={handleDrawerClose} user={user} />
+            <DrawerLeft user={user} open={open} handleDrawerClose={handleDrawerClose} setUser={setUser} />
+
         </header>
     )
 }

@@ -11,12 +11,13 @@
     width: 80%;
     margin-top: 5rem;
     border-radius: 5px;
+    margin-bottom: 2rem;
     padding: 1rem;
     
 }
 .books-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 220px);
+    grid-template-columns: repeat(auto-fit, 230px);
     grid-gap: 1rem;
     list-style: none;
     justify-content: center;
@@ -31,7 +32,7 @@
     box-shadow: 0 0 3px #ccc;
     display: grid;
     height: 100%;
-    padding: 2rem;
+    padding: 1rem;
     justify-items: center;
     gap: 1rem;
 }

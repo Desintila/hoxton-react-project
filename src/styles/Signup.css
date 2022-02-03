@@ -2,7 +2,7 @@
     background-color: #f2f3f4;
     display: grid;
     
-    place-items: center;
+    justify-items: center;
 }
 .register-section{
     background-color: #fff;
@@ -10,7 +10,7 @@
     -webkit-box-shadow: 0 0 3px #ccc;
     box-shadow: 0 0 3px #ccc;
     width: 80%;
-    margin: 5rem;
+    margin-top: 5rem;
     display: grid;
     padding: 2rem;
     place-items: center;
