@@ -14,6 +14,13 @@
           "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+428544412_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
           "genre": "Adventure",
           "status": "ongoing"
+        },
+        {
+          "id": 6,
+          "title": "Heidi",
+          "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+543586922_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+          "genre": "Drama",
+          "status": "completed"
         }
       ]
     }
