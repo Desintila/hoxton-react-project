@@ -2,7 +2,7 @@ import { useState } from 'react'
 import '../styles/Header.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import DrawerLeft from './Drawer';
-function Header() {
+function Header({ user }) {
     const [open, setOpen] = useState(false);
 
     const handleDrawerOpen = () => {
@@ -22,7 +22,7 @@ function Header() {
                     <h1 className='app-title'>HBooks</h1>
                 </div>
             </nav>
-            <DrawerLeft open={open} />
+            <DrawerLeft open={open} handleDrawerClose={handleDrawerClose} user={user} />
         </header>
     )
 }

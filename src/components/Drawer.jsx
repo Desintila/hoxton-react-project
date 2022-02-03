@@ -1,21 +1,41 @@
-import { Drawer, List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import { Drawer } from "@mui/material";
 import LoginIcon from '@mui/icons-material/Login';
+import { useNavigate } from "react-router-dom";
 
 
-function DrawerLeft({ open }) {
 
+function DrawerLeft({ user, open, handleDrawerClose }) {
+    const navigate = useNavigate()
     return (
         <Drawer anchor="left" open={open}>
-            <List>
-                {['Login', 'Register', 'Category', 'Library'].map(text => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            <LoginIcon />
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
+            <section>
+                <img src={user.avatar} height="50" width="50" />
+
+
+
+
+                <h3>{user.firstName}</h3>
+                <ul>
+                    <li onClick={() => {
+                        navigate('/home')
+                        handleDrawerClose()
+                    }}>Home</li>
+                    <li onClick={() => {
+                        navigate('/login')
+                        handleDrawerClose()
+                    }}><LoginIcon />Login</li>
+                    <li onClick={() => {
+                        navigate('/signup')
+                        handleDrawerClose()
+                    }
+                    } >Register</li>
+                    <li onClick={() => {
+                        navigate('/library')
+                        handleDrawerClose()
+                    }}>Library</li>
+                    <li>Category</li>
+                </ul>
+            </section>
         </Drawer>
     )
 }

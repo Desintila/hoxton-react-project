@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import '../styles/Homepage.css'
+import { useNavigate } from "react-router-dom"
+function Home({ books, setBooks }) {
 
-function Home() {
-    const [books, setBooks] = useState([])
     useEffect(() => {
         fetch('http://localhost:3000/books')
             .then(resp => resp.json()
@@ -10,7 +10,7 @@ function Home() {
     }, [])
 
 
-
+    const navigate = useNavigate()
 
 
 
@@ -21,8 +21,9 @@ function Home() {
                 <h2 className='section-title'>Novels</h2>
                 <ul className="books-list">
                     {books.map(book => (
-                        <li key={book.id} >
-                            <article className="book-item">
+                        <li key={book.id}>
+
+                            <article className="book-item" onClick={() => navigate(`/home/${book.id}`)} >
                                 <div className='book-img'>
                                     <img src={book.image} />
                                     <span className={`status ${book.status === 'ongoing' ? 'ongoing' : book.status === 'completed' ? 'completed' : 'dropped'}`} >{book.status}</span>
@@ -32,6 +33,7 @@ function Home() {
                                 <h3 className='book-title'>{book.title}</h3>
                                 <span className='book-genre'>{book.genre}</span>
                             </article>
+
                         </li>
                     ))
 

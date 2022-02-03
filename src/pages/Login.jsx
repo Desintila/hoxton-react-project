@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import '../styles/Signup.css'
-function Login() {
+function Login({ user, setUser }) {
     const navigate = useNavigate()
-    const [user, setUser] = useState('')
+
 
 
     function signIn(email, password) {
@@ -23,6 +23,7 @@ function Login() {
         event.preventDefault()
         signIn(event.target.email.value, event.target.password.value)
         event.target.reset()
+        navigate('/home')
     }
 
     return (
