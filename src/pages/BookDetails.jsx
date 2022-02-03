@@ -36,10 +36,32 @@ function BookDetails({ user, book, setBook, setUser }) {
         libraryUpdate.library.push({ id: book.id, title: book.title, image: book.image, genre: book.genre, status: book.status })
         setUser(libraryUpdate)
         addInLibrary(libraryUpdate)
+        navigate('/library')
 
     }
 
+    function createComment(updateComments) {
+        return fetch(`http://localhost:3000/books/${book.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ comments: updateComments.comments })
+        }).then(resp => resp.json())
+    }
 
+
+    function addComment(content) {
+        const updateComments = JSON.parse(JSON.stringify(book))
+        updateComments.comments.push({
+            content: content,
+            userId: user.id,
+            userAvatar: user.avatar,
+            timeCreated: new Date().toLocaleString()
+        })
+        setBook(updateComments)
+        createComment(updateComments)
+    }
 
 
 
@@ -68,6 +90,20 @@ function BookDetails({ user, book, setBook, setUser }) {
             </section>
             <section className="book-details">
                 <h2>Comments</h2>
+                <form onSubmit={(event) => {
+                    event.preventDefault()
+                    addComment(event.target.comment.value)
+                    event.target.reset()
+                }}>
+
+                    <input type="text" name="comment" />
+                    <button type="submit">Post</button>
+                </form>
+                <ul>
+                    {book.comments.map(comment => (
+                        <li>{comment.content}</li>
+                    ))}
+                </ul>
                 <div>
                 </div>
             </section>

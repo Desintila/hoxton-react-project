@@ -21,6 +21,20 @@
           "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+543586922_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
           "genre": "Drama",
           "status": "completed"
+        },
+        {
+          "id": 4,
+          "title": "The Da Vinci code",
+          "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+40157450_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+          "genre": "Mystery",
+          "status": "completed"
+        },
+        {
+          "id": 1,
+          "title": "The adventures of Tom Sawyer",
+          "image": "https://coverart.oclc.org/ImageWebSvc/oclc/+-+04429400_140.jpg?SearchOrder=+-+OT,OS,TN,GO,FA",
+          "genre": "Adventure",
+          "status": "completed"
         }
       ]
     }
@@ -39,7 +53,14 @@
       "tags": [
         "Adventures, Book Characters, Friendship, History"
       ],
-      "comments": []
+      "comments": [
+        {
+          "content": "Good story",
+          "userId": 1,
+          "userAvatar": "https://avatars.dicebear.com/api/avataaars/DesintilaLuzi.svg",
+          "timeCreated": "2/3/2022, 11:37:19 AM"
+        }
+      ]
     },
     {
       "title": "Peter Pan",
@@ -114,7 +135,14 @@
       "tags": [
         " Swiss Alpps, Peter"
       ],
-      "comments": []
+      "comments": [
+        {
+          "content": "I love this book. I love it more and more every time I re-read it,",
+          "userId": 1,
+          "userAvatar": "https://avatars.dicebear.com/api/avataaars/DesintilaLuzi.svg",
+          "timeCreated": "2/3/2022, 11:41:27 AM"
+        }
+      ]
     },
     {
       "title": "The little prince",
