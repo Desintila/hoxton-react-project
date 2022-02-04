@@ -168,6 +168,30 @@
       "bookId": 6,
       "userId": 2,
       "id": 2
+    },
+    {
+      "content": "My all-time favorite work of fiction. I usually read this every summer.",
+      "bookId": 1,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "content": "Thomas",
+      "bookId": 1,
+      "id": 4
+    },
+    {
+      "content": "heidiii",
+      "bookId": 6,
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "content": "heidiii",
+      "bookId": 6,
+      "userId": 2,
+      "id": 6
     }
   ],
   "bookChapters": [

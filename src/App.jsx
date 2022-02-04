@@ -30,7 +30,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    fetch('http://localhost:3000/books')
+    fetch('http://localhost:3000/books?_embed=comments')
       .then(resp => resp.json()
         .then(books => setBooks(books)))
   }, [])
@@ -45,7 +45,7 @@ function App() {
         <Route path='home' element={<Home books={books} search={search} />} />
         <Route path='/signup' element={<SignUp users={users} setUsers={setUsers} />} />
         <Route path='/login' element={<Login setUser={setUser} />} />
-        <Route path='/home/:id' element={<BookDetails users={users} user={user} setUser={setUser} book={book} setBook={setBook} />} />
+        <Route path='/home/:id' element={<BookDetails users={users} user={user} setUser={setUser} book={book} setBook={setBook} books={books} />} />
         <Route path='/library' element={<Library user={user} />} />
         <Route path='/category' element={<Category books={books} />} />
         <Route path='/chapters' element={< Chapters book={book} />} />

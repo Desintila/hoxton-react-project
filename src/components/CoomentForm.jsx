@@ -1,4 +1,4 @@
-function CommentForm({ user, book, setBook }) {
+function CommentForm({ user, book, comments, setComments }) {
 
     function createComment(content) {
         return fetch('http://localhost:3000/comments', {
@@ -16,9 +16,11 @@ function CommentForm({ user, book, setBook }) {
     function submitComment(event) {
         event.preventDefault()
         createComment(event.target.comment.value).then(function (comment) {
-            const updateComments = JSON.parse(JSON.stringify(book))
-            updateComments.comments.push(comment)
-            setBook(updateComments)
+            const updateComments = JSON.parse(JSON.stringify(comments))
+            comment.book = book
+            comment.user = user
+            updateComments.push(comment)
+            setComments(updateComments)
             event.target.reset()
         })
     }
