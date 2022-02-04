@@ -1,9 +1,10 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import '../styles/Tabs.css'
 
 function Tabs({ book }) {
     const [tab, setTab] = useState('info')
-
+    const navigate = useNavigate()
     return (
         <section className="book-details">
             <div >
@@ -37,7 +38,15 @@ function Tabs({ book }) {
                     </div>
 
                     <div className={`content ${tab === 'chapters' ? "active-content" : ""}`}>
-                        <h2>Chapters</h2>
+                        <h2>Chapters: </h2>
+                        <ul className="chapter-list">
+                            {book.bookChapters.map(page =>
+                                <li>  {page.chapter.map(chapter =>
+                                    <li onClick={() => navigate('/chapters')}>{chapter.chapterTitle}</li>)}
+
+                                </li>
+                            )}
+                        </ul>
                     </div>
 
                     <div className={`content ${tab === 'review' ? "active-content" : ""}`}>

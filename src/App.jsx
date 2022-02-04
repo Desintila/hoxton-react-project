@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Chapters from './components/Chapters'
 import Footer from './components/Footer'
 
 
@@ -34,6 +35,7 @@ function App() {
         .then(books => setBooks(books)))
   }, [])
 
+
   return (
     <div className="App">
       <Header user={user} setUser={setUser} setSearch={setSearch} />
@@ -46,6 +48,7 @@ function App() {
         <Route path='/home/:id' element={<BookDetails users={users} user={user} setUser={setUser} book={book} setBook={setBook} />} />
         <Route path='/library' element={<Library user={user} />} />
         <Route path='/category' element={<Category books={books} />} />
+        <Route path='/chapters' element={< Chapters book={book} />} />
       </Routes>
       <Footer />
     </div>

@@ -16,7 +16,7 @@ function BookDetails({ user, book, setBook, setUser, users }) {
 
 
     useEffect(() => {
-        fetch(`http://localhost:3000/books/${params.id}?_embed=comments`)
+        fetch(`http://localhost:3000/books/${params.id}?_embed=comments&_embed=bookChapters`)
             .then(resp => resp.json())
             .then(book => setBook(book))
     }, [])

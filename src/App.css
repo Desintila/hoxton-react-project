@@ -4,3 +4,11 @@
     place-items: center;
     padding: 3rem;
 }
+.chapter-title{
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+}
+.chapter-list{
+    list-style: none;
+    padding: 0.5rem;
+}
