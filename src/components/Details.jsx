@@ -36,7 +36,7 @@ function Details({ book, user, setUser }) {
             </div>
 
             <div className="buttons">
-                <Button variant="contained">
+                <Button variant="contained" onClick={() => navigate('/chapters')}>
                     Start Reading
                 </Button>
 
